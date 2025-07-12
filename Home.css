@@ -1,0 +1,238 @@
+/* Home.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  padding: 60px 20px 20px;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: -1;
+}
+.top-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  color: #0ff;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  z-index: 9999;
+  border-bottom: 1px solid #0ff;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  gap: 40px;
+}
+.hero-text {
+  max-width: 55%;
+}
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+.hero-text h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, #0ff, #f0f, #0ff);
+  transition: width 0.5s ease-in-out;
+}
+.hero-text h1:hover::after {
+  width: 100%;
+}
+.hero-text p {
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-bottom: 15px;
+  transition: color 0.4s ease;
+}
+.hero-text p:hover {
+  color: #0ff;
+}
+.about-section {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-top: 10px;
+  max-width: 90%;
+  transition: color 0.3s ease;
+}
+.about-section:hover {
+  color: #0ff;
+}
+.hero-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.hero-image:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #0ff;
+}
+.skills-section {
+  background-color: rgba(17, 17, 17, 0.9);
+  border: 1px solid #222;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+.skills-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+.skills-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding-left: 0;
+}
+.skills-section li {
+  background-color: #111;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #0ff;
+  font-weight: bold;
+}
+.skills-section li a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.skills-section li a:hover {
+  color: #fff;
+}
+.project-row {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin: 100px 0;
+  padding: 0 30%;
+}
+.project-row .project:nth-child(2) {
+  transform: translateX(-60px);
+}
+.project-row .project:nth-child(3) {
+  transform: translateX(60px);
+}
+.project {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: flex-start;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.project.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.glow-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #000;
+  border: 3px solid #0ff;
+  box-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #0ff;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.project a {
+  text-decoration: none;
+  color: #0ff;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-left: 15px;
+  display: inline-block;
+  border: 1px solid #0ff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.project a:hover {
+  color: #000;
+  background-color: #0ff;
+  transform: scale(1.05);
+}
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.social-links a {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-links a:hover {
+  color: #0ff;
+  transform: scale(1.1);
+}
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+  font-size: 0.9rem;
+}
+.typed-text {
+  font-size: 1.3rem;
+  color: #00adb5;
+  font-weight: bold;
+}
+.cursor {
+  display: inline-block;
+  background-color: #00adb5;
+  width: 2px;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
