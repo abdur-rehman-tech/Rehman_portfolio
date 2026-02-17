@@ -1,5 +1,4 @@
-// Home.js
-const text = "Data Scientist | Machine Learning Enthusiast";
+const text = "DevOps and Cloud Engineer";
 const speed = 60;
 let i = 0;
 
